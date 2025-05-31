@@ -1,0 +1,66 @@
+# .NET build artifacts
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+.history/
+
+# Rider
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# MAUI platform-specific build artifacts
+*.apk
+*.aab
+*.ipa
+*.app
+*.xcarchive
+
+# MAUI build cache
+*.android-cache
+*.ios-cache
+*.maccatalyst-cache
+*.winui-cache
+
+# NuGet packages and logs
+*.nupkg
+packages/
+*.log
+
+# User secrets (if used)
+secrets.json
+
+# JetBrains ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Visual Studio for Mac
+.vscode/
+*.pidb
+*.userprefs
+.vs/
+
+# dotnet watch
+.dotnet-watch.json
+
+# VS build artifacts and cache
+*.vsidx
+*.dtbcache.v2
+build/
