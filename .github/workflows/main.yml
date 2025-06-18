@@ -28,8 +28,5 @@ jobs:
     - name: Pack NuGet package
       run: dotnet pack Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release -o out
 
-    - name: Add nuget.org source
-      run: dotnet nuget add source https://api.nuget.org/v3/index.json --name nuget.org
-
     - name: Publish to NuGet
       run: dotnet nuget push out/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source nuget.org
