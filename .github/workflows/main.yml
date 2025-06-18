@@ -26,7 +26,7 @@ jobs:
       run: dotnet build Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release --no-restore
 
     - name: Pack NuGet package
-      run: dotnet pack Maui.LocalDB.Sync.nuspec -o out
+      run: dotnet pack Maui.LocalDB.Sync/Maui.LocalDB.Sync.nuspec -o out
 
     - name: Publish to NuGet
       run: dotnet nuget push out/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
