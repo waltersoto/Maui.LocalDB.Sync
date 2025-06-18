@@ -4,7 +4,7 @@ on:
   push:
     tags:
       - 'v*.*.*'  # Triggers only when you push version tags like v1.0.0
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual trigger via GitHub UI
 
 jobs:
   build-and-publish:
@@ -25,9 +25,11 @@ jobs:
     - name: Build (auto-locate project)
       run: dotnet build Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release --no-restore
 
-    - name: Pack NuGet package (via nuget CLI)
+    - name: Pack NuGet package
       run: dotnet pack Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release -o out
 
-    - name: Publish to NuGet
-      run: dotnet nuget push out/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+    - name: Add nuget.org source
+      run: dotnet nuget add source https://api.nuget.org/v3/index.json --name nuget.org
 
+    - name: Publish to NuGet
+      run: dotnet nuget push out/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source nuget.org
