@@ -18,14 +18,15 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj
+    - name: Restore (auto-locate project)
+      run: dotnet restore $(find . -name '*.csproj')
 
-    - name: Build the project
-      run: dotnet build Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release --no-restore
+    - name: Build (auto-locate project)
+      run: dotnet build $(find . -name '*.csproj') --configuration Release --no-restore
 
     - name: Pack NuGet package
       run: dotnet pack Maui.LocalDB.Sync.nuspec -o out
 
     - name: Publish to NuGet
       run: dotnet nuget push out/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
