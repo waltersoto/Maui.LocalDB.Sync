@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Maui.LocalDB.Sync</id>
+    <version>1.0.0</version>
+    <authors>Walter Soto</authors>
+    <owners>Walter Soto</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Offline-first sync library for .NET MAUI using local SQLite storage, conflict resolution, retry logic, and TTL policies.</description>
+    <releaseNotes>Initial stable release with TTL, conflict strategies, retry, and optional encryption support.</releaseNotes>
+    <tags>maui sync sqlite offline net8.0</tags>
+    <projectUrl>https://github.com/waltersoto/Maui.LocalDB.Sync</projectUrl>
+    <repository type="git" url="https://github.com/waltersoto/Maui.LocalDB.Sync" />
+  </metadata>
+  <files>
+    <file src="bin\Release\net8.0\Maui.LocalDB.Sync.dll" target="lib\net8.0" />
+    <file src="bin\Release\net8.0\Maui.LocalDB.Sync.pdb" target="lib\net8.0" />
+    <file src="LICENSE" target="" />
+    <file src="README.md" target="" />
+  </files>
+</package>
