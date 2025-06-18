@@ -19,10 +19,10 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore (auto-locate project)
-      run: dotnet restore $(find . -name '*.csproj')
+      run: dotnet restore Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj
 
     - name: Build (auto-locate project)
-      run: dotnet build $(find . -name '*.csproj') --configuration Release --no-restore
+      run: dotnet build Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release --no-restore
 
     - name: Pack NuGet package
       run: dotnet pack Maui.LocalDB.Sync.nuspec -o out
