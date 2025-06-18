@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
 
@@ -23,16 +23,10 @@ jobs:
       run: dotnet restore Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj
 
     - name: Build (auto-locate project)
-      run: dotnet build Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release --no-restore
+      run: dotnet build Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release
 
     - name: Pack NuGet package
-      run: dotnet pack Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release -o out
+      run: dotnet pack Maui.LocalDB.Sync/Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release --output ./nupkg
 
     - name: Publish to NuGet
-      run: |
-        FILE=$(ls out/*.nupkg | head -n 1)
-        if [ -z "$FILE" ]; then
-          echo "No package file found in ./out. Check the pack step for errors."
-          exit 1
-        fi
-        dotnet nuget push "$FILE" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
