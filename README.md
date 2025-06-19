@@ -21,7 +21,6 @@
 
 ## 📦 Installation
 
-NuGet:
 ![NuGet](https://img.shields.io/nuget/v/Ws.Maui.LocalDB.Sync.svg?label=NuGet "NuGet")
 
 ```bash
