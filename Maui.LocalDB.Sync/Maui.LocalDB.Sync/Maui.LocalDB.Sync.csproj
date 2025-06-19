@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup>
-  <PackageId>Maui.LocalDB.SyncKit</PackageId>
+  <PackageId>Ws.Maui.LocalDB.Sync</PackageId>
     <Version>1.0.0</Version>
     <Authors>Walter Soto</Authors>
     <Description>Offline-first sync library for .NET MAUI using local SQLite storage, conflict resolution, retry logic, and TTL policies.</Description>
