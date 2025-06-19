@@ -1,2 +1,0 @@
-- name: Build C# project
-  run: dotnet build Maui.LocalDB.Sync/Maui.LocalDB.Sync.csproj --configuration Release
