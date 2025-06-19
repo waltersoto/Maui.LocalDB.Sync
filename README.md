@@ -1,4 +1,4 @@
-﻿# Maui.LocalDB.Sync
+﻿# Ws.Maui.LocalDB.Sync
 
 **Maui.LocalDB.Sync** is a lightweight, modular sync library for .NET MAUI apps that need offline-first functionality. It provides an extensible and testable mechanism to sync remote data with a local SQLite database using a clean and pluggable architecture.
 
@@ -20,10 +20,10 @@
 
 ## 📦 Installation
 
-Coming soon via NuGet:
+NuGet:
 
 ```bash
-dotnet add package Maui.LocalDB.Sync
+dotnet add package Ws.Maui.LocalDB.Sync
 ```
 
 ---
@@ -110,7 +110,7 @@ Each `SyncResult<T>` contains an `Exception? Error` field to track failed operat
 * [x] TTL Pruning Support
 * [x] Retry + Error Tracking
 * [x] Incremental Sync via Metadata
-* [ ] NuGet Packaging & Versioning
+* [x] NuGet Packaging & Versioning
 * [ ] Platform-specific samples (Android, Windows, etc)
 
 ---
