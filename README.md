@@ -1,9 +1,10 @@
 ﻿# Ws.Maui.LocalDB.Sync
 
-**Maui.LocalDB.Sync** is a lightweight, modular sync library for .NET MAUI apps that need offline-first functionality. It provides an extensible and testable mechanism to sync remote data with a local SQLite database using a clean and pluggable architecture.
+**Ws.Maui.LocalDB.Sync** is a lightweight, modular sync library for .NET MAUI apps that need offline-first functionality. It provides an extensible and testable mechanism to sync remote data with a local SQLite database using a clean and pluggable architecture.
 
-![NuGet](https://img.shields.io/badge/nuget-coming_soon-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![NuGet](https://img.shields.io/nuget/v/Ws.Maui.LocalDB.Sync.svg?label=NuGet "NuGet")
+![License: MIT](https://img.shields.io/badge/license-MIT-green.svg "License: MIT")
+ 
 
 ---
 
@@ -21,6 +22,7 @@
 ## 📦 Installation
 
 NuGet:
+![NuGet](https://img.shields.io/nuget/v/Ws.Maui.LocalDB.Sync.svg?label=NuGet "NuGet")
 
 ```bash
 dotnet add package Ws.Maui.LocalDB.Sync
