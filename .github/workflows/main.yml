@@ -6,6 +6,9 @@ on:
       - 'v*.*.*'  # Triggers only when you push version tags like v1.0.0
   workflow_dispatch:  # Allows manual trigger via GitHub UI
 
+permissions:
+  contents: read
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
